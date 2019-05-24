@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html data-isShowStatePicker="true">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit"/>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords"/>
+    <meta itemprop="name" content="新东方在线学习平台"/>
+    <meta itemprop="image" content="//images.koolearn.com/shark/framework/i/logo/icon.png"/>
+    <meta name="description" itemprop="description" content="新东方官方网校，为广大用户提供个性化、互动化、智能化的卓越在线学习体验。"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <title>我的课堂-新东方在线</title>
+    <!--[if lt IE 8]>
+    <script type="text/javascript" src="//static.koocdn.com/lib/json-js/json2.169.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="//static.koocdn.com/lib/es5-shim/es5-shim.7850.js"></script>
+    <![endif]-->
+    <!-- 全站通用 -->
+    <link rel="stylesheet" type="text/css" href="//static.koocdn.com/framework/css/global.17622.css"/>
+    <script type="text/javascript" src="//static.koocdn.com/framework/js/global.17078.js"></script>
+
+
+    <script type="text/javascript">
+        seajs.config({
+            'base':'//static.koocdn.com/',
+            'importBase':'//static.koocdn.com/',
+            'comboExcludes':function(uri) {
+
+                if (uri.indexOf("/common/tinymce/") > 0) {
+                    return true
+                }
+            },
+        });
+    </script>
+
+    <script type="text/javascript">
+        var g_header_host = {
+            'domains.sso': 'https://login.koolearn.com/sso'
+        };
+    </script>
+    <script type="text/javascript" src="//static.koocdn.com/project/header/1.x/common/common-mix/common-mix.bundle.18864.js"></script>
+    <script type="text/javascript" src="//static.koocdn.com/project/header/1.x/common/dialog-login/dialog-login.bundle.19171.js"></script>
+
+    <!--只有study域名下的页面显示客服入口-->
+    <!--
+    <script type="text/javascript">
+        seajs.use(['project/teach/1.x/common/zhichi-float/zhichi-float'], function (init) {
+            init({
+                //是否有右侧在线客服浮块
+                isFloat: ,
+                //点击右侧浮块是否滑出咨询窗口，若为false或者不设置，则弹出窗口，否则从右侧滑动出小窗
+                openAnimateDialog:
+            });
+        });
+    </script>
+    -->
+
+
+    <script type="text/javascript">
+        document.domain = 'koolearn.com';
+    </script>
+</head>
+<body>
+<!-- 头部 S -->
+
+<div id="g-header"></div>
+<script type="text/javascript" src="//static.koocdn.com/project/header/1.x/common/header/header.bundle.19171.js"></script>
+<script>
+    var reqHead1 = "my";
+    var reqHead2 = "";
+    var highlight = '';
+    if (reqHead1 == "my" && reqHead2 == "") {
+        highlight = 'wdkt';
+    } else if (reqHead1 == "buy") {
+        highlight = 'wyxk';
+    } else if (reqHead1 == "live") {
+        highlight = 'zb';
+    } else if (reqHead1 == "ordercenter") {
+        highlight = 'zhydd';
+    }
+    $(window).trigger('g-header.highlight', highlight);
+</script>
+
+<!-- 头部 E -->
+
+
+<!-- 2nd header debug info
+ _2nd = none
+ 二级导航key
+ -->
+
+
+
+
+<link rel="stylesheet" type="text/css" href="//static.koocdn.com/project/study-class/2.x/css/home/page.19057.css"/>
+<script type="text/javascript" src="//static.koocdn.com/lib/vue/2.x/vue.17951.js"></script>
+<script type="text/javascript" src="//static.koocdn.com/project/wenjuan/1.x/common/wenjuan-feedback/wenjuan.bundle.19057.js"></script>
+<script type="text/javascript">
+    seajs.config({
+
+
+        'alias':{
+            'project/teach/1.x/common/breadcrumb-dropdown/breadcrumb-dropdown':'project/teach/1.x/common/breadcrumb-dropdown/breadcrumb-dropdown.19058.js',
+            'project/teach/1.x/common/build-page-turn/build-page-turn':'project/teach/1.x/common/build-page-turn/build-page-turn.19058.js',
+            'project/teach/1.x/common/cascade-select/cascade':'project/teach/1.x/common/cascade-select/cascade.15666.js',
+            'project/teach/1.x/common/course-practice/course-practice':'project/teach/1.x/common/course-practice/course-practice.19058.js',
+            'project/teach/1.x/common/dialog/xdfDialog':'project/teach/1.x/common/dialog/xdfDialog.15709.js',
+            'project/teach/1.x/common/end-practice/end-practice':'project/teach/1.x/common/end-practice/end-practice.19058.js',
+            'project/teach/1.x/common/fix/getAttrData':'project/teach/1.x/common/fix/getAttrData.15660.js',
+            'project/teach/1.x/common/image-preview/image-preview':'project/teach/1.x/common/image-preview/image-preview.16830.js',
+            'project/teach/1.x/common/imitate-radio/2.x/imitate-radio':'project/teach/1.x/common/imitate-radio/2.x/imitate-radio.15793.js',
+            'project/teach/1.x/common/kooplayer/kooplayer':'project/teach/1.x/common/kooplayer/kooplayer.6784.js',
+            'project/teach/1.x/common/plus-helping/plus-helping':'project/teach/1.x/common/plus-helping/plus-helping.18948.js',
+            'project/teach/1.x/common/plus-helping-btn/plus-helping-btn':'project/teach/1.x/common/plus-helping-btn/plus-helping-btn.18948.js',
+            'project/teach/1.x/common/public-course-dialog/public-course-dialog':'project/teach/1.x/common/public-course-dialog/public-course-dialog.19058.js',
+            'project/teach/1.x/common/public-course-dialog/2.x/public-course-dialog':'project/teach/1.x/common/public-course-dialog/2.x/public-course-dialog.19058.js',
+            'project/teach/1.x/common/state-picker/state-picker':'project/teach/1.x/common/state-picker/state-picker.js',
+            'project/cms-mix/1.x/common/datetimepicker/datetimepicker':'project/cms-mix/1.x/common/datetimepicker/datetimepicker.16391.js',
+            'project/cms-mix/1.x/common/linkup/linkup-2.x':'project/cms-mix/1.x/common/linkup/linkup-2.x.17294.js',
+            'project/shuati/1.x/common/audio/audio':'project/shuati/1.x/common/audio/audio.14342.js',
+            'project/shuati/1.x/common/subject/subject':'project/shuati/1.x/common/subject/subject.16800.js',
+            'project/teach/1.x/common/imitate-radio/imitate-radio':'project/teach/1.x/common/imitate-radio/imitate-radio.15784.js',
+            'project/shuati/1.x/common/subject/subject':'project/shuati/1.x/common/subject/subject.16800.js',
+            'project/shuati/1.x/common/cascade-select/cascade':'project/shuati/1.x/common/cascade-select/cascade.js',
+            'project/teach/1.x/common/dialog/xdfDialog':'project/teach/1.x/common/dialog/xdfDialog.15709.js',
+            'project/vip-teacher/1.x/common/vip-dialog/vip-dialog':'project/vip-teacher/1.x/common/vip-dialog/vip-dialog.16913.js'
+        }
+    });
+</script>
+<script type="text/javascript">
+    seajs.config({
+
+
+    });
+</script>
+<div id="jp-wrap"><div class="i-wrap p-loading"></div></div>
+<script>
+    seajs.use('project/study-class/2.x/js/home/page', function (init) {
+
+        init({
+            currentTime: 1539876097522,
+            api: {
+                getLive: '/preview',
+                // 获取微信状态
+                getWeChat: '/learning-center/wechat',
+                getProductList: '/my-data',
+                getProductListNumber: '/learning-center/list-number',
+                setProductListTopStatus: '/user-product-top',
+                setProductListHideStatus: '/v2/toggleUserProduct',
+                // 日历页
+                gotoCalendar: '/my/sdcourses',
+                // 设置休学
+                setHoliday: '/my/suspension/s',
+                setRecover: '/my/suspension/r',
+                gotoHolidayList: 'my/{orderNo}/{productId}/dropout/record',
+                //当用户没有绑定手机或者邮箱的时候需要跳转到个人信息页面进行绑定，这里配置个人信息页面的地址
+                gotoUserInfo: '//i.koolearn.com/account/safety',
+                gotoOldVersion: '/my?version=1',
+                getAskCount: '//qaadmin.koolearn.com/quiz/unreadnum'
+            },
+            toolsLink: {
+                ask: '/tools/question/list',
+                note: '/tools/notebook/list',
+                textbook: '/tools/resource/list',
+                errors: '/tools/wrongtopic/class/list',
+                express: '//kuaidi.koolearn.com/web/studsum/index',
+                videos: '//app.koolearn.com/zhuanti/app'
+            },
+            askCountPostData: {
+                ids: '',
+                question_user_id: 77626844
+            }
+        });
+    });
+    seajs.use('project/study-class/2.x/common/user-tools-bar/user-tools-bar');
+</script>
+
+<script>
+    window['g_global_wenjuan_data'] = {
+        type: 0,			// 问题类型，课表使用固定值
+        getWenjuanData: {
+            'id': '11001',
+            'orderNo':'',
+            'productId':'0',
+            'platform': 'shayu',				// 鲨鱼系统使用的固定值
+            'platform_resource_id': 0,		// 平台的资源ID,这里使用课表ID
+            'process': 0,
+            'user_id': 77626844,
+            'user_name': "",
+            'verify_code':""
+        },
+        'column_value_json': {
+            "produce_id":0,
+            "product_name":"",
+            "courseware_name":"",
+            "teacher_name":"",
+            "teacher_real_name":"",
+            "product_line":0,
+            "service_id":0,
+            "service_name":"",
+            "answer_id":0,
+            'answer_msg':'',
+            'shayu_name':'',
+            'img_url':''
+        }
+    }
+</script>
+<!--<script type="text/javascript" src="//static.koocdn.com/framework/js/pv/pv.js" charset="utf-8"></script>-->
+<script type="text/javascript" src="//static.koocdn.com/framework/js/pv/pv.17479.js"></script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);mixpanel.init("ec424f4c03f8701f7226f5a009d90586");</script><!-- end Mixpanel -->
+<link rel="stylesheet" type="text/css" href="//static.koocdn.com/project/setting/1.0/common/footer/footer.10571.css"/>
+<div class="i-setting-footer">
+    <div class="footer-inner">© 2000-2018 koolearn.com&nbsp;&nbsp;&nbsp;京ICP备05067669号&nbsp;&nbsp;&nbsp;新东方在线 <span title="19171_19171">版权所有</span>&nbsp;&nbsp;&nbsp;&nbsp;新东方教育科技集团旗下成员公司</div>
+</div>
+
+<!--在study.koolearn.com各页面下配置GTM监控代码-->
+<script type="text/javascript" src="//img.koolearn.com/v2/js/GTM.js"></script>
+</body>
+</html>

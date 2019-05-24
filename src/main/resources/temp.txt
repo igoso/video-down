@@ -1,0 +1,32 @@
+https://pl.koolearn.com/api/hls/m3u8?sign=x15meyMMDgI1Emumg7drJXMxLT0&timestamp=1539706452435&consumerType=1002001&encrypt=0&videoId=18020&userId=77626844&videoType=1
+
+➜  xdf hexdump -C hls-vodkey.bin
+00000000  f8 29 28 61 17 7b 2c 8a  63 84 b4 50 4c 0f 1f 67  |.)(a.{,.c..PL..g|
+00000010
+➜  xdf hexdump -v -e '16/1 "%02x"' hls-vodkey.bin
+f8292861177b2c8a6384b4504c0f1f67%
+➜  xdf strkey=$(hexdump -v -e '16/1 "%02x"' hls-vodkey.bin)
+➜  xdf echo $strkey
+f8292861177b2c8a6384b4504c0f1f67
+➜  xdf echo ${#strkey}
+32
+➜  xdf openssl aes-128-cbc -d -in 2015_ys_yd_5-7_zn_7.mp4Frag1Num0.ts -out media_decryptd_0.tsd.ts -nosalt -iv '8e87a51fe970c7648a3f63b8a3675bd2' -K $strkey
+ok
+
+AES-128
+https://pl.koolearn.com:443/api/hls/bin?code=fb23beca-a75f-4603-83e4-93297895a1fe&consumerType=1002001&keyVersion=0001&timestamp=1539708848643&sign=xhZnaXICUSqnh5LNHurkpzFNT_k
+8e87a51fe970c7648a3f63b8a3675bd2
+mp4urls size:293
+
+
+
+/ky/next/8851/2926776689/3777321/7026760/1
+
+
+new
+http://video.koopass.com:8134/hls-vod/ky/sy/2016/zz/19kyzz_dx_lyq_1_2.mp4Frag1Num0.ts?userId=77626844&ctype=1002001&code=2b2eb623-35d5-4396-ac22-e585f6326c0e&videoType=1&online=1
+old
+http://vdn1.koopass.com:80/ky/sy/2016/zz/19kyzz_dx_lyq_1_2.mp4/265604/19kyzz_dx_lyq_1_2.mp4tipsid0.ts?userId=77626844&ctype=1002001&code=a2aba9d3-9e46-4164-9d32-35952bdabe34&playerVersion=1.0.1&videoType=0&online=1
+
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --no-first-run --no-default-browser-check --user-data-dir=$(mktemp -d -t 'chrome-remote_data_dir')

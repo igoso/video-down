@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response protocol="3.1" server="prod">
+    <daystart elapsed_days="4314" elapsed_seconds="33789"/>
+    <app appid="mimojjlkmoijpicakmndhoigimigcmbb" cohort="1:d0j:" cohortname="Chrome [M50... M99]" status="ok">
+        <updatecheck status="ok">
+            <urls>
+                <url codebase="http://redirector.gvt1.com/edgedl/release2/chrome_component/AIXDYlerezV7_31.0.0.122/"/>
+                <url codebase="https://redirector.gvt1.com/edgedl/release2/chrome_component/AIXDYlerezV7_31.0.0.122/"/>
+                <url codebase="http://dl.google.com/release2/chrome_component/AIXDYlerezV7_31.0.0.122/"/>
+                <url codebase="https://dl.google.com/release2/chrome_component/AIXDYlerezV7_31.0.0.122/"/>
+                <url codebase="http://www.google.com/dl/release2/chrome_component/AIXDYlerezV7_31.0.0.122/"/>
+                <url codebase="https://www.google.com/dl/release2/chrome_component/AIXDYlerezV7_31.0.0.122/"/>
+            </urls>
+            <manifest version="31.0.0.122">
+                <packages>
+                    <package fp="1.973c5cfd3ecf320c218ec5ebef20a2b8ad1702017fc276fd3072031b0e450ab3"
+                             hash="WbH7eBIGVTCwivP3MMBKYz8cev8="
+                             hash_sha256="973c5cfd3ecf320c218ec5ebef20a2b8ad1702017fc276fd3072031b0e450ab3"
+                             name="31.0.0.122_mac64_PepperFlashPlayer.crx3" required="true" size="11673700"/>
+                </packages>
+            </manifest>
+        </updatecheck>
+        <ping status="ok"/>
+    </app>
+</response>
